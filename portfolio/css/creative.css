@@ -16,7 +16,7 @@ body {
 
 hr {
     max-width: 50px;
-    border-color: #fff;
+    border-color: #000;
     border-width: 3px;
 }
 
@@ -25,7 +25,7 @@ hr.light {
 }
 
 a {
-    color: #fff;
+    color: #000;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -33,7 +33,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #eb3812;
+    color: #ff0000;
 }
 
 h1,
