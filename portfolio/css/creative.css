@@ -33,7 +33,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #ff0000;
+    color: #a94442;
 }
 
 h1,
@@ -112,7 +112,7 @@ aside {
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #ff0000!important;
+    color: #a94442 !important;
     background-color: transparent;
 }
 
