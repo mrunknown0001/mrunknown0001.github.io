@@ -39,6 +39,9 @@ const displayProfile = function (profile) {
                 Repos: ${profile.public_repos}
                 Gists: ${profile.public_gists}
             </p>
+            <p>
+                <strong>Portfolio:</strong><a href="https://mrunknown0001.github.io/portfolio/index.html"></a>
+            </p>
         </div>
     `;
 };
