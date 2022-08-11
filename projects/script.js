@@ -40,7 +40,7 @@ const displayProfile = function (profile) {
                 Gists: ${profile.public_gists}
             </p>
             <p>
-                <strong>Portfolio:</strong><a href="https://mrunknown0001.github.io/portfolio/index.html">github-pages</a>
+                <strong>Portfolio:</strong> <a href="https://mrunknown0001.github.io/portfolio/index.html">github-pages</a>
             </p>
         </div>
     `;
