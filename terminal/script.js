@@ -26,7 +26,9 @@ const commands = {
   - <a href="https://bfcgroup.ph" target="_blank">Authenticator</a>: A custom Laravel App for centralized authentication. <br>
   => Role: Full Stack Developer<br>
   - <a href="https://smd.bfcgroup.ph" target="_blank">Sales and Marketing Dashboard</a>: A Laravel dashboard for tracking sales and marketing data. <br>
-  => Role: Full Stack Developer<br>`,
+  => Role: Full Stack Developer<br>
+  - <a href="https://www.brooksidegroup.org" target="_blank">Brookside Company Website</a>: A WordPress website for a company.<br>
+  => Role: Full Stack Developer`,
 
   social: `Find me on: <br>
   - GitHub: <a href="https://github.com/mrunknown0001" target="_blank">github.com/mrunknown0001</a><br>
