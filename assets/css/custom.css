@@ -1,0 +1,411 @@
+/**
+* Custom overrides & additions on top of the DevFolio template.
+* Kept in a separate file so `main.css` stays upgradeable.
+*/
+
+/*--------------------------------------------------------------
+# Header / logo (sitename is a span now, hero owns the only <h1>)
+--------------------------------------------------------------*/
+.header .logo .sitename {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 700;
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+}
+
+@media (max-width: 575px) {
+  .header .logo .sitename {
+    font-size: 22px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+.hero h1 {
+  margin: 0;
+  /* Scales down between breakpoints so the full name never wraps awkwardly. */
+  font-size: clamp(30px, 6.4vw, 64px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.hero .hero-eyebrow {
+  display: inline-block;
+  margin: 0 0 18px 0;
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 75%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 40%);
+}
+
+.hero .hero-lead {
+  margin: 18px auto 0 auto;
+  max-width: 720px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+}
+
+.hero .hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.hero .hero-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-family: var(--nav-font);
+  font-size: 15px;
+  font-weight: 500;
+  border: 2px solid var(--accent-color);
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  transition: 0.3s;
+}
+
+.hero .hero-cta a.btn-ghost {
+  background: transparent;
+  color: var(--contrast-color);
+  border-color: color-mix(in srgb, var(--contrast-color), transparent 65%);
+}
+
+.hero .hero-cta a:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+  transform: translateY(-2px);
+}
+
+.hero .hero-marquee {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 34px;
+  max-width: 760px;
+}
+
+.hero .hero-marquee span {
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 6px;
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
+  background: color-mix(in srgb, #ffffff, transparent 90%);
+  border: 1px solid color-mix(in srgb, #ffffff, transparent 85%);
+}
+
+@media (max-width: 768px) {
+  .hero .hero-lead {
+    font-size: 15px;
+  }
+
+  .hero .hero-cta a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Stats strip
+--------------------------------------------------------------*/
+.stats-strip {
+  padding-top: 0;
+  padding-bottom: 60px;
+}
+
+.stats-strip .stat-box {
+  text-align: center;
+  padding: 26px 14px;
+  height: 100%;
+  border-radius: 16px;
+  background-color: var(--surface-color);
+  box-shadow: 0px 5px 40px 0px rgba(0, 0, 0, 0.08);
+}
+
+.stats-strip .stat-box .stat-value {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1px;
+  min-height: 42px;
+}
+
+.stats-strip .stat-box .purecounter,
+.stats-strip .stat-box .stat-num,
+.stats-strip .stat-box .stat-suffix {
+  font-family: var(--heading-font);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--heading-color);
+}
+
+.stats-strip .stat-box .stat-suffix {
+  color: var(--accent-color);
+}
+
+.stats-strip .stat-box p {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+/*--------------------------------------------------------------
+# Tech stack section
+--------------------------------------------------------------*/
+.stack .stack-group {
+  height: 100%;
+  padding: 28px 26px;
+  border-radius: 18px;
+  background-color: var(--surface-color);
+  border-bottom: 4px solid transparent;
+  box-shadow: 0px 5px 60px 0px rgba(0, 0, 0, 0.08);
+  transition: all ease-in-out 0.3s;
+}
+
+.stack .stack-group:hover {
+  border-bottom-color: var(--accent-color);
+  transform: translateY(-6px);
+}
+
+.stack .stack-group .stack-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.stack .stack-group .stack-head i {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 12px;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+}
+
+.stack .stack-group h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stack .stack-group .stack-note {
+  font-size: 13px;
+  margin: 0 0 16px 0;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.stack .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stack .chips li {
+  font-family: var(--nav-font);
+  font-size: 13px;
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: var(--default-color);
+  background: color-mix(in srgb, var(--default-color), transparent 94%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  transition: 0.25s;
+}
+
+.stack .chips li:hover {
+  color: var(--accent-color);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+}
+
+/*--------------------------------------------------------------
+# Services — description text
+--------------------------------------------------------------*/
+.services .service-item {
+  padding: 40px 30px;
+}
+
+.services .service-item h3 {
+  margin-top: 4px;
+}
+
+.services .service-item .service-tags {
+  margin: 14px 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.services .service-item .service-tags li {
+  font-size: 12px;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 5px;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  background: color-mix(in srgb, var(--default-color), transparent 95%);
+}
+
+/*--------------------------------------------------------------
+# Portfolio — status pill for projects without a public URL
+--------------------------------------------------------------*/
+/* Card titles are <h3> so the heading order doesn't skip a level; keep the
+   template's h4 sizing. */
+.portfolio .portfolio-item .portfolio-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-right: 50px;
+  margin-bottom: 5px;
+}
+
+.portfolio .portfolio-item .portfolio-info .status-pill {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: var(--nav-font);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+/* Cards with no outbound link: pull the preview icon into the details slot
+   so it doesn't sit awkwardly off-centre. */
+.portfolio .portfolio-item .portfolio-info:not(:has(.details-link)) .preview-link {
+  right: 14px;
+  font-size: 28px;
+}
+
+/*--------------------------------------------------------------
+# About — heading is an <h3> now (h1 → h2 → h3 order), same look as the
+# template's h4 rule.
+--------------------------------------------------------------*/
+.about .about-me h3 {
+  font-size: 28px;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.about .about-me h3:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 64px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/*--------------------------------------------------------------
+# About — highlights list replacing the old percentage bars
+--------------------------------------------------------------*/
+.about .about-highlights {
+  margin: 22px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about .about-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 15px;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+}
+
+.about .about-highlights li:first-child {
+  border-top: 0;
+}
+
+.about .about-highlights li i {
+  color: var(--accent-color);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/*--------------------------------------------------------------
+# Contact — make the info items clickable without losing the look
+--------------------------------------------------------------*/
+.contact .info-item a {
+  color: var(--default-color);
+}
+
+.contact .info-item a:hover {
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer .footer-note {
+  text-align: center;
+  margin: 18px 0 0 0;
+  font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Accessibility helpers
+--------------------------------------------------------------*/
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  padding: 12px 20px;
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+}
+
+a:focus-visible,
+button:focus-visible,
+.navmenu a:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

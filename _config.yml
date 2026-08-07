@@ -1,7 +1,22 @@
- github: [metadata]
- kramdown:
-   input: GFM
-   hard_wrap: false
- gems:
-   - jekyll-coffeescript
-   - jekyll-paginate
+# This site is plain static HTML — Jekyll only needs to copy it and stay out of the way.
+title: Michael Adam Trinidad
+description: >-
+  Full stack developer and IT manager building Laravel/React business systems,
+  API and AI integrations, workflow automation, and Linux cloud infrastructure.
+url: "https://mrunknown0001.github.io"
+lang: en
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Keep source-only and legacy folders out of the published build.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - forms
+  - README.md
+
+# `gems:` was renamed to `plugins:` in Jekyll 3; GitHub Pages ignores the old key.
+plugins: []
